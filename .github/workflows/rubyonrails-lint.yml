@@ -25,6 +25,7 @@ jobs:
       - name: Run security checks
         run: |
           gem install bundler-audit
+          pwd
           bin/bundler-audit --update
           bin/brakeman -q -w2
       # Add or Replace any other Linters here
