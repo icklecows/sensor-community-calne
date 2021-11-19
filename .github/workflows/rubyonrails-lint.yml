@@ -22,9 +22,11 @@ jobs:
         with:
           bundler-cache: true
       # Add or Replace any other security checks here
+      - name: Install standalone gems
+        run: |
+          gem install bundler-audit brakeman rubocop
       - name: Run security checks
         run: |
-          gem install bundler-audit
           bundler-audit --update
           brakeman -q -w2
       # Add or Replace any other Linters here
