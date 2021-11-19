@@ -25,10 +25,9 @@ jobs:
       - name: Run security checks
         run: |
           gem install bundler-audit
-          pwd
-          bin/bundler-audit --update
-          bin/brakeman -q -w2
+          bundler-audit --update
+          brakeman -q -w2
       # Add or Replace any other Linters here
       - name: Run linters
         run: |
-          bin/rubocop --parallel
+          rubocop --parallel
