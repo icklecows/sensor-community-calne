@@ -24,7 +24,7 @@ jobs:
       # Add or Replace any other security checks here
       - name: Install standalone gems
         run: |
-          gem install bundler-audit brakeman rubocop
+          gem install bundler-audit brakeman rubocop rubocop-discourse
       - name: Run security checks
         run: |
           bundler-audit --update
