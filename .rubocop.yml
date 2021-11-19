@@ -4,6 +4,7 @@ AllCops:
   Exclude:
     - 'bin/bundle'
     - 'bin/yarn'
+    - 'vendor/**/*'
 
 Layout/LineLength:
   Max: 120
