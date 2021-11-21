@@ -1,24 +1,13 @@
-# README
+# Calne Community Sensors
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a Ruby on Rails project designed to collate air quality data from community and public sources and make it available in a standard format.
 
-Things you may want to cover:
+## Sensors
 
-* Ruby version
+The app collects metadata about community sensors. This will be used to fetch and process sensor data from the [sensor.community](https://sensor.community) project.
 
-* System dependencies
+It will also make it possible to enter data from other sources to provide a complete picture of air quality in the town.
 
-* Configuration
+## Data
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+The app will make air quality data available in JSON format for re-use.
