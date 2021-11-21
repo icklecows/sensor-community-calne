@@ -1,5 +1,6 @@
+# Controller to manage sensors
 class SensorsController < ApplicationController
-  before_action :set_sensor, only: %i[ show edit update destroy ]
+  before_action :set_sensor, only: %i[show edit update destroy]
 
   # GET /sensors or /sensors.json
   def index
@@ -7,8 +8,7 @@ class SensorsController < ApplicationController
   end
 
   # GET /sensors/1 or /sensors/1.json
-  def show
-  end
+  def show; end
 
   # GET /sensors/new
   def new
@@ -16,8 +16,7 @@ class SensorsController < ApplicationController
   end
 
   # GET /sensors/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /sensors or /sensors.json
   def create
@@ -25,7 +24,7 @@ class SensorsController < ApplicationController
 
     respond_to do |format|
       if @sensor.save
-        format.html { redirect_to @sensor, notice: "Sensor was successfully created." }
+        format.html { redirect_to @sensor, notice: 'Sensor was successfully created.' }
         format.json { render :show, status: :created, location: @sensor }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -38,7 +37,7 @@ class SensorsController < ApplicationController
   def update
     respond_to do |format|
       if @sensor.update(sensor_params)
-        format.html { redirect_to @sensor, notice: "Sensor was successfully updated." }
+        format.html { redirect_to @sensor, notice: 'Sensor was successfully updated.' }
         format.json { render :show, status: :ok, location: @sensor }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -51,27 +50,28 @@ class SensorsController < ApplicationController
   def destroy
     @sensor.destroy
     respond_to do |format|
-      format.html { redirect_to sensors_url, notice: "Sensor was successfully destroyed." }
+      format.html { redirect_to sensors_url, notice: 'Sensor was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_sensor
-      @sensor = Sensor.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def sensor_params
-      params.fetch(:sensor, {}).permit(
-        :label,
-        :model,
-        :node_id,
-        :pm_sensor_id,
-        :temp_rh_sensor_id,
-        :community_registration_id,
-        :active
-      )
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_sensor
+    @sensor = Sensor.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def sensor_params
+    params.fetch(:sensor, {}).permit(
+      :label,
+      :model,
+      :node_id,
+      :pm_sensor_id,
+      :temp_rh_sensor_id,
+      :community_registration_id,
+      :active
+    )
+  end
 end

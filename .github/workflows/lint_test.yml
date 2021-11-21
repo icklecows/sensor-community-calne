@@ -2,8 +2,8 @@
 # They are provided by a third-party and are governed by
 # separate terms of service, privacy policy, and support
 # documentation.
-# This workflow will download a prebuilt Ruby version, install dependencies, and run linters
-name: Rails - Install dependencies and run linters
+# This workflow will download a prebuilt Ruby version, install dependencies, run linters and run tests
+name: Rails - Install dependencies, run linters and tests
 
 on:
   push:
@@ -33,3 +33,7 @@ jobs:
       - name: Run linters
         run: |
           rubocop --parallel
+      - name: Run tests
+        run: |
+          bin/rails spec
+          bin/rails cucumber

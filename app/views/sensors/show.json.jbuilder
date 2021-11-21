@@ -1,1 +1,1 @@
-json.partial! "sensors/sensor", sensor: @sensor
+json.partial! 'sensors/sensor', sensor: @sensor

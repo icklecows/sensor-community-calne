@@ -1,4 +1,14 @@
 <p id="notice"><%= notice %></p>
 
+<ul>
+  <li><%= @sensor.id %></li>
+  <li><%= @sensor.label %></li>
+  <li><%= @sensor.model %></li>
+  <li><%= @sensor.node_id %></li>
+  <li><%= @sensor.pm_sensor_id %></li>
+  <li><%= @sensor.temp_rh_sensor_id %></li>
+  <li><%= @sensor.community_registration_id %></li>
+  <li><%= @sensor.active ? 'active' : 'inactive' %></li>
+</ul>
 <%= link_to 'Edit', edit_sensor_path(@sensor) %> |
 <%= link_to 'Back', sensors_path %>

@@ -15,10 +15,10 @@ ActiveRecord::Schema.define(version: 2021_11_18_230009) do
   create_table "sensors", force: :cascade do |t|
     t.string "label"
     t.string "model"
-    t.string "node_id"
-    t.string "pm_sensor_id"
-    t.string "temp_rh_sensor_id"
-    t.string "community_registration_id"
+    t.integer "node_id"
+    t.integer "pm_sensor_id"
+    t.integer "temp_rh_sensor_id"
+    t.integer "community_registration_id"
     t.boolean "active"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

@@ -4,10 +4,17 @@ AllCops:
   Exclude:
     - 'bin/bundle'
     - 'bin/yarn'
+    - 'db/schema.rb'
+    - 'lib/tasks/cucumber.rake'
     - 'vendor/**/*'
 
 Layout/LineLength:
   Max: 120
+
+Metrics/BlockLength:
+  Exclude:
+    - 'config/**/*'
+    - 'spec/**/*'
 
 Style/ClassAndModuleChildren:
   Enabled: false
