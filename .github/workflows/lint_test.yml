@@ -65,5 +65,6 @@ jobs:
           PGPASSWORD: postgres
           RAILS_ENV: test
         run: |
+          bin/rails webpacker:compile
           bin/rails spec
           bin/rails cucumber
