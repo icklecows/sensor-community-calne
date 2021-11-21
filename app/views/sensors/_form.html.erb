@@ -1,0 +1,39 @@
+<%= form_with(model: sensor) do |form| %>
+  <% if sensor.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(sensor.errors.count, "error") %> prohibited this sensor from being saved:</h2>
+
+      <ul>
+        <% sensor.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <%= form.label :label, "Label" %>
+  <%= form.text_field :label %>
+
+  <%= form.label :model, "Model" %>
+  <%= form.text_field :model %>
+
+  <%= form.label :node_id, "Node ID" %>
+  <%= form.text_field :node_id %>
+
+  <%= form.label :pm_sensor_id, "PM Sensor ID" %>
+  <%= form.text_field :pm_sensor_id %>
+
+  <%= form.label :temp_rh_sensor_id, "Temp RH Sensor ID" %>
+  <%= form.text_field :temp_rh_sensor_id %>
+
+  <%= form.label :community_registration_id, "Community Registration ID" %>
+  <%= form.text_field :community_registration_id %>
+
+  <%= form.radio_button :active, true %>
+  <%= form.label :active_true, "Active" %>
+  <%= form.radio_button :active, false %>
+  <%= form.label :active_false, "Inactive" %>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
