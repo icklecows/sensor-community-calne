@@ -40,7 +40,6 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: '16'
-      - run: npm install
       # Add or Replace any other security checks here
       - name: Install standalone gems
         run: |
