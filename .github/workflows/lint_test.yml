@@ -60,6 +60,9 @@ jobs:
           PGHOST: localhost
           PGUSER: postgres
           PGPASSWORD: postgres
+          DATABASE_NAME_TEST: sensor_community_test
+          DATABASE_USERNAME_TEST: postgres
+          DATABASE_PASSWORD_TEST: postgres
           RAILS_ENV: test
         run: |
           bin/rails db:setup
@@ -68,6 +71,9 @@ jobs:
           PGHOST: localhost
           PGUSER: postgres
           PGPASSWORD: postgres
+          DATABASE_NAME_TEST: sensor_community_test
+          DATABASE_USERNAME_TEST: postgres
+          DATABASE_PASSWORD_TEST: postgres
           RAILS_ENV: test
         run: |
           bin/rails webpacker:install
