@@ -36,10 +36,10 @@ jobs:
         with:
           bundler-cache: true
 
-      - name: Setup javascript environment
-        uses: actions/setup-node@v2
-        with:
-          node-version: '16'
+      # - name: Setup javascript environment
+      #   uses: actions/setup-node@v2
+      #   with:
+      #     node-version: '16'
       # Add or Replace any other security checks here
       - name: Install standalone gems
         run: |
@@ -76,6 +76,5 @@ jobs:
           DATABASE_PASSWORD_TEST: postgres
           RAILS_ENV: test
         run: |
-          bin/rails webpacker:install
           bin/rails spec
           bin/rails cucumber
