@@ -1,3 +1,3 @@
-# Helper methods for the app
+# Application Helper
 module ApplicationHelper
 end
